@@ -1,41 +1,43 @@
-/* CSS-Code für das Responsive Design */
-@media only screen and (max-width: 768px) {
-  /* Slideshow */
-  .slideshow-container {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  
-  /* Artikelbilder */
-  .container {
-    flex-direction: column;
-  }
-  
-  .item {
-    width: 100%;
-  }
-  
-  /* Video-Container */
-  .video-container {
-    margin-top: 20px;
-  }
+/* Slideshow */
+.slideshow-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slide {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1mm;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0px 8px 16px 16px rgba(0, 0, 0, 0.3);
 }
 
 body {
   overflow-x: hidden;
-  background-color: rgb(26,29,41);
+  background-color: rgb(26, 29, 41);
   margin: 0;
   padding: 0;
 }
 
 /* Kopfzeile */
-
 header {
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: rgb(26,29,41);
+  background-color: rgb(26, 29, 41);
 }
 
 #header {
@@ -47,7 +49,6 @@ header {
 }
 
 /* Logo */
-
 .logo {
   display: flex;
   width: 80px;
@@ -58,11 +59,10 @@ header {
 }
 
 /* Linie unter der Kopfzeile */
-
 .line {
   width: 100%;
   height: 3px;
-  background-color: rgb(46,49,60);
+  background-color: rgb(46, 49, 60);
   position: fixed;
   top: 70px;
   left: 0;
@@ -70,7 +70,6 @@ header {
 }
 
 /* Menu */
-
 .menu {
   display: flex;
   justify-content: center;
@@ -99,60 +98,20 @@ nav {
   width: 100%;
 }
 
-/* Bilder einstellung */
-
-.slideshow-container {
-  position: relative;
-  margin-top: 100px;
-  width: 600px;
-  margin-left: 265px; /* Bild nahch links einstellung */
-  margin-right: 265px; /* Bild nahch rechts einstellung */
-  display: block;
-}
-
-
-.slide {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.slide.active {
-  display: block;
-  opacity: 1;
-}
-
-.slide img {
-  max-width: 1000px;
-  width: auto;
-  max-height: 400px;
-  height: auto;
-  border-radius: 1mm;
-  object-fit: cover;
-  object-position: center;
-  box-shadow: 0px 8px 16px 16px rgba(0, 0, 0, 0.3);
-}
-
-html {
-  background-color: rgb(26, 29, 41);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 50vh;
-}
 .container {
-  top: -60px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 .item {
-  width: 35%;
-  position: relative;
-  padding: 15px;
-  cursor: pointer;
-  top: 100px;
+  width: calc(20% - 20px);
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .item__border {
@@ -164,10 +123,10 @@ html {
 }
 
 .item__image {
- width: 100%;
- height: 100%;
- border-radius: 5px;
- z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  z-index: 1;
 }
 
 .item__image.hover-image {
@@ -193,20 +152,25 @@ html {
   visibility: visible;
 }
 
-@media only screen and (min-width: 992px) {
-  .container {
-    flex-direction: row;
-  }
+@media only screen and (max-width: 768px) {
   .item {
-  width: 20%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
-}  
+}
+
+@media only screen and (min-width: 1200px) {
+  .item {
+    width: calc(20% - 20px);
+  }
+}
 
 .video-container {
   width: 100%;
   overflow-x: auto;
   white-space: nowrap;
-  margin-top: 220px;
+  margin-top: 20px;
 }
 
 .video-row {
@@ -232,7 +196,6 @@ html {
   max-height: 185px;
   height: auto;
 }
-
 
 .video-item:hover img {
   transform: scale(1.1);
@@ -277,36 +240,4 @@ html:hover ::-webkit-scrollbar {
 ::-webkit-scrollbar-thumb {
   height: 1px; /* Kleinste Höhe der Scrollleiste */
   width: 5px; /* Breite der Scrollleiste */
-}
-
-
-/* Media Queries */
-@media only screen and (max-width: 768px) {
-  .slideshow-container {
-    margin-left: 200px;
-    margin-right: 0;
-  }
-  
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .item {
-    width: 80%;
-  }
-  
-  .video-container {
-    margin-top: 200px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-
-  #content {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 2%;
-}
-
 }
