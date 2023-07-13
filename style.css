@@ -1,8 +1,16 @@
 /* Slideshow */
 .slideshow-container {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.slideshow-container:first-child {
+  margin-left: 10px; /* Abstand von 10px zur linken Seite */
 }
 
 .slide {
@@ -105,6 +113,7 @@ nav {
   align-items: flex-start;
   margin-left: -10px;
   margin-right: -10px;
+  margin-top: 100px; /* Verschieben Sie den Container um 100px nach unten */
 }
 
 .item {
@@ -170,35 +179,40 @@ nav {
   width: 100%;
   overflow-x: auto;
   white-space: nowrap;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px; /* Abstand von 10px nach unten */
 }
 
 .video-row {
-  display: inline-block;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .video-item {
-  display: inline-block;
-  margin-right: 10px;
+  flex: 0 0 25%;
+  margin-right: 3px; /* Abstand von 3px zwischen den Video-Containern */
   cursor: pointer;
 }
 
 .video-item:first-child {
-  margin-left: 45px;
+  margin-left: 0;
 }
 
 .video-item img {
-  left: 300px;
   border-radius: 5mm;
   padding: 12px;
-  max-width: 785px;
-  width: auto;
-  max-height: 185px;
+  max-width: 80%;
   height: auto;
 }
 
 .video-item:hover img {
   transform: scale(1.1);
+}
+
+.slideshow-container .slide {
+  margin-right: 20px; /* Abstand von 20px zwischen den einzelnen Slides */
 }
 
 /* Für WebKit-basierte Browser */
