@@ -1,31 +1,24 @@
-var slides = document.getElementsByClassName("slide");
-var currentSlide = 0;
+// Button-Element abrufen
+const addToWatchlistButton = document.getElementById('add-to-watchlist');
 
-function showNextSlide() {
-  slides[currentSlide].classList.remove("active");
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add("active");
-}
+// Button-Klick-Ereignis
+addToWatchlistButton.addEventListener('click', function() {
+  // Informationen über den Film
+  const film = {
+    title: 'The Shawshank Redemption',
+    image: 'https://bit.ly/3NIODu5',
+    // Weitere Informationen...
+  };
 
-function startSlideshow() {
-  slides[currentSlide].classList.add("active");
-  setInterval(showNextSlide, 15000); // Alle 15 Sekunden wechseln
-}
+  // Watchlist-Array aus dem localStorage abrufen oder ein neues Array erstellen
+  let watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
 
-startSlideshow();
+  // Film zur Watchlist hinzufügen
+  watchlist.push(film);
 
-var prevScrollpos = window.pageYOffset;
+  // Watchlist-Array in localStorage speichern
+  localStorage.setItem('watchlist', JSON.stringify(watchlist));
 
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("header").style.top = "0";
-    document.querySelector(".line").style.top = "80px"; // Anpassen Sie hier den Wert auf den gewünschten Abstand zur Kopfzeile
-  } else {
-    document.getElementById("header").style.top = "-100px";
-    document.querySelector(".line").style.top = "0";
-  }
-
-  prevScrollpos = currentScrollPos;
-};
+  // Manuelle Weiterleitung zur Watchlist-Seite
+  window.location.href = '../../watchlist.html';
+});
