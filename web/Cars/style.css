@@ -183,6 +183,8 @@ html {
   overflow-x: auto;
   white-space: nowrap;
   margin-top: 220px;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .video-row {
