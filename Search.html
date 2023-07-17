@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .search-bar {
+      position: absolute;
+      margin-top: 20px;
+      background-color: none; /* Transparenter Hintergrund */
+      top: 0px; /* Verschiebung um 20 Pixel nach oben */
+      padding: 5px;
+      display: flex;
+    }
+
+    .search-bar.show {
+      display: flex;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 10px;
+      border: none;
+      height: 10px;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-size: 16px;
+    }
+
+    .search-bar button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .search-bar button:hover {
+      background-color: #0056b3;
+    }
+
+    .menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu button {
+  font-family: Arial;
+  font-size: 17px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 3px 10px; /* 3px oben/unten, 10px links/rechts */
+  height: 30px; /* Höhe des Buttons */
+  line-height: 24px; /* Höhe des Textinhalts im Button (4px kleiner als die Button-Höhe) */
+}
+
+.menu button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#thumbnail-container img {
+  border-radius: 5mm;
+  padding: 12px;
+  max-width: 18%;
+  height: auto;
+  transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+}
+#thumbnail-container img:hover {
+  border: 3px solid #6a6a6a;
+  transform: scale(1.03);
+}
+  </style>
+</head>
+<body>
+  <header id="header">
+    <img class="logo" src="logo.png" alt="Logo">
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+        <li>
+          <button id="search-button" class="menu-button" onclick="toggleSearchBar()"><i class="fas fa-search"></i>Search</button>
+          <div id="search-bar" class="search-bar">
+            <input id="search-input" type="text" placeholder="Search...">
+            <button id="search-submit" class="search-button">Search</button>
+          </div>
+        </li>
+    </nav>
+  </header>
+
+  <div class="line"></div>
+
+  
+<div id="thumbnail-container"></div>
+
+  <script>
+    // Funktion zum Anzeigen des Thumbnails und Weiterleiten zu einer anderen Webseite
+function showThumbnailAndRedirect() {
+  var searchInput = document.getElementById('search-input');
+  var thumbnailContainer = document.getElementById('thumbnail-container');
+  
+  var searchQuery = searchInput.value.toLowerCase();
+  
+  if (searchQuery === 'luca') {
+    // Erzeuge das Thumbnail-Bild für Luca
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://bit.ly/3NIODu5';
+    thumbnailImage.alt = 'Luca Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für Luca
+      window.location.href = 'web/Luca/index.html';
+    });
+  } else if (searchQuery === 'spiderman') {
+    // Erzeuge das Thumbnail-Bild für Spiderman
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://variety.com/wp-content/uploads/2021/04/Sony-Disney-Spider-Man.jpg?w=1000';
+    thumbnailImage.alt = 'Spiderman Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für Spiderman
+      window.location.href = 'web/Marvel/web/Spiderman/index.html';
+    });
+  } else if (searchQuery === 'cars') {
+    // Erzeuge das Thumbnail-Bild für Cars
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'vorschau3.jpg';
+    thumbnailImage.alt = 'cars Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für Cars
+      window.location.href = 'web/Cars/index.html';
+    });
+  } else if (searchQuery === 'drachen') {
+    // Erzeuge das Thumbnail-Bild für drachen
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'vorschau7.jpg';
+    thumbnailImage.alt = 'drachen Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für drachen
+      window.location.href = 'web/Drachenzähmen/index.html';
+    });
+  } else if (searchQuery === 'drachen') {
+    // Erzeuge das Thumbnail-Bild für drachen
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'vorschau7.jpg';
+    thumbnailImage.alt = 'drachen Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für drachen
+      window.location.href = 'web/Drachenzähmen/index.html';
+    });
+  } else if (searchQuery === 'park') {
+    // Erzeuge das Thumbnail-Bild für park
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'vorschau1.jpg';
+    thumbnailImage.alt = 'park Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für park
+      window.location.href = 'web/Willkommen Im Wunder Park/index.html';
+    });
+  } else if (searchQuery === 'source code') {
+    // Erzeuge das Thumbnail-Bild für Source Code
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://image.tmdb.org/t/p/w1280/4mECSL1X5qyfCLO82SCx8JxSXTQ.jpg';
+    thumbnailImage.alt = 'Source Code Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für Source Code
+      window.location.href = 'web/Source Code/index.html';
+    });
+  } else if (searchQuery === 'source code') {
+    // Erzeuge das Thumbnail-Bild für Source Code
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://image.tmdb.org/t/p/w1280/4mECSL1X5qyfCLO82SCx8JxSXTQ.jpg';
+    thumbnailImage.alt = 'Source Code Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für Source Code
+      window.location.href = 'web/Source Code/index.html';
+    });
+  } else if (searchQuery === 'ratte') {
+    // Erzeuge das Thumbnail-Bild für Ratatouille
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'vorschau4.jpg';
+    thumbnailImage.alt = 'Ratatouille Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für Ratatouille
+      window.location.href = 'web/Ratatouille/index.html';
+    });
+  } else if (searchQuery === 'dino') {
+    // Erzeuge das Thumbnail-Bild für Dinosaurier
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'vorschau2.jpg';
+    thumbnailImage.alt = 'Dinosaurier Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für Dinosaurier
+      window.location.href = 'web/im Land der Dinosaurier/index.html';
+    });
+  } else if (searchQuery === 'max') {
+    // Erzeuge das Thumbnail-Bild für Max Bester Freund Held Retter
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'vorschau6.jpg';
+    thumbnailImage.alt = 'Max Bester Freund Held Retter Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für Max Bester Freund Held Retter
+      window.location.href = 'web/Max Bester Freund Held Retter/index.html';
+    });
+  } else if (searchQuery === 'pool') {
+    // Erzeuge das Thumbnail-Bild für Deadpool
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://images7.alphacoders.com/901/thumb-1920-901925.jpg';
+    thumbnailImage.alt = 'Deadpool Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für Deadpool
+      window.location.href = 'web/Marvel/web/Deadpool/index.html';
+    });
+  } else if (searchQuery === 'of the') {
+    // Erzeuge das Thumbnail-Bild für Guardians of the Galaxy
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/C1C0181ED7342217394E5AC940003A8653E3311B6016194749B29A0FE3F238EB/scale?width=1200&aspectRatio=1.78&format=jpeg';
+    thumbnailImage.alt = 'Guardians of the Galaxy Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für Guardians of the Galaxy
+      window.location.href = 'web/Marvel/web/Guardians of the Galaxy/index.html';
+    });
+  } else if (searchQuery === 'iron man') {
+    // Erzeuge das Thumbnail-Bild für Iron Man
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://es.web.img3.acsta.net/r_654_368/newsv7/20/05/07/12/52/3980724.jpg';
+    thumbnailImage.alt = 'Iron Man Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für Iron Man
+      window.location.href = 'web/Marvel/web/Iron Man/index.html';
+    });
+  } else if (searchQuery === 'star wars') {
+    // Erzeuge das Thumbnail-Bild für Star Wars
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/5A9416D67DC9595496B2666087596EE64DE379272051BB854157C0D938BE2C26/scale?width=640&aspectRatio=1.78&format=png';
+    thumbnailImage.alt = 'Star Wars Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für Star Wars
+      window.location.href = 'web/Star Wars/index.html';
+    });
+  } else {
+    // Kein passendes Thumbnail gefunden
+    thumbnailContainer.innerHTML = 'Kein Thumbnail gefunden.';
+  }
+}
+
+// Event-Listener für das Such-Button-Klicken
+var searchSubmitButton = document.getElementById('search-submit');
+searchSubmitButton.addEventListener('click', showThumbnailAndRedirect);
+
+// Event-Listener für das Drücken der Enter-Taste im Suchfeld
+var searchInput = document.getElementById('search-input');
+searchInput.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    showThumbnailAndRedirect();
+    event.preventDefault(); // Verhindert das Standardverhalten des Formulars
+  }
+});
+
+  </script>
+</body>
+</html>
