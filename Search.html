@@ -366,6 +366,23 @@ function showThumbnailAndRedirect() {
       // Weiterleiten zu einer anderen Webseite für Star Wars
       window.location.href = 'web/Star Wars/index.html';
     });
+  } else if (searchQuery === 'milo') {
+    // Erzeuge das Thumbnail-Bild für milo
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://files.fm/thumb.php?i=kvjz86nb3';
+    thumbnailImage.alt = 'milo Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für milo
+      window.location.href = 'milo/index.html';
+    });
   } else {
     // Kein passendes Thumbnail gefunden
     thumbnailContainer.innerHTML = 'Kein Thumbnail gefunden.';

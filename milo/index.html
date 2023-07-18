@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .search-bar {
+      position: absolute;
+      margin-top: 20px;
+      background-color: none; /* Transparenter Hintergrund */
+      top: 0px; /* Verschiebung um 20 Pixel nach oben */
+      padding: 5px;
+      display: none;
+    }
+
+    .search-bar.show {
+      display: flex;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 10px;
+      border: none;
+      height: 10px;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-size: 16px;
+    }
+
+    .search-bar button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .search-bar button:hover {
+      background-color: #0056b3;
+    }
+
+    .menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu button {
+  font-family: Arial;
+  font-size: 17px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 3px 10px; /* 3px oben/unten, 10px links/rechts */
+  height: 30px; /* Höhe des Buttons */
+  line-height: 24px; /* Höhe des Textinhalts im Button (4px kleiner als die Button-Höhe) */
+}
+
+.menu button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+  </style>
+</head>
+<body>
+  <header id="header">
+    <img class="logo" src="https://files.fm/thumb.php?i=hv6mcuduc" alt="Logo">
+    <nav>
+      <ul class="menu">
+        <li><a href="../index.html"><i class="fas fa-home"></i>Home</butaton></li>
+        <li><a href="../Search.html"><i class="fas fa-search"></i>Search</a>
+        </li>
+    </nav>
+  </header>
+
+  <div class="line"></div>
+
+  <div class="slideshow-container">
+    <div class="slide">
+      <a href="#Disney">
+        <img src="https://i.imgur.com/X7Pu1T3.jpg" alt="Image 1">
+      </a>
+    </div>
+    <div class="slide">
+      <a href="../web/Luca/index.html">
+        <img src="https://i.imgur.com/dZsD1cE.jpg" alt="Image 2">
+      </a>
+    </div>
+    <div class="slide">
+      <a href="../web/Star Wars/index.html">
+        <img src="image3.jpg" alt="Image 3">
+      </a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="item">
+      <a href="../web/Star Wars/index.html">
+        <div class="item__border">
+          <img class="item__image" src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/5A9416D67DC9595496B2666087596EE64DE379272051BB854157C0D938BE2C26/scale?width=640&aspectRatio=1.78&format=png" alt="">
+          <img alt="" class="item__image hover-image" src="https://prod-ripcut-delivery.disney-plus.net/v1/rawFiles/disney/RAW_59F432D7A600A8F1CE36AE4D0B96570AC7C8277A0E8855BC06FABBAE090E6577">
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="video-container">
+    <div class="video-row">
+      <div class="video-item" onclick="window.location.href='../web/Willkommen Im Wunder Park/index.html'">
+        <img src="vorschau1.jpg" alt="Vorschau 1">
+      </div>
+      <div class="video-item" onclick="window.location.href='../web/im Land der Dinosaurier/index.html'">
+        <img src="vorschau2.jpg" alt="Vorschau 2">
+      </div>
+      <div class="video-item" onclick="window.location.href='../web/Cars/index.html'">
+        <img src="vorschau3.jpg" alt="Vorschau 3">
+      </div>
+      <div class="video-item" onclick="window.location.href='../web/Ratatouille/index.html'">
+        <img src="vorschau4.jpg" alt="Vorschau 4">
+      </div>
+    </div>
+    <div class="video-row">
+      <div class="video-item" onclick="window.location.href='../web/Luca/index.html'">
+        <img src="https://bit.ly/3NIODu5" alt="Vorschau 5">
+      </div>
+      <div class="video-item" onclick="window.location.href='../web/Drachenzähmen/index.html'">
+        <img src="vorschau7.jpg" alt="Vorschau 7">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
