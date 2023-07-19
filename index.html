@@ -159,39 +159,42 @@
         <img src="https://image.tmdb.org/t/p/w1280/4mECSL1X5qyfCLO82SCx8JxSXTQ.jpg" alt="Vorschau 8">
       </div>
     </div>
-  </div>
+    <wbr></wbr>
+    
+    <div class="video-row">
+      <div class="video-item" onclick="window.location.href='web/No Hard Feelings/index.html'">
+        <img src="https://i.ibb.co/wCmV7Z2/images-Kopie-v1.png" alt="Vorschau 5">
+      </div>
+      <div class="video-item" onclick="window.location.href='web/The Hate u Give/index.html'">
+        <img src="https://csrd.asu.edu/sites/default/files/the_hate_u_give_-_website_image.png" alt="Vorschau 4">
+      </div>
+      <div class="video-item" onclick="window.location.href='web/The Banker/index.html'">
+        <img src="https://i.ytimg.com/vi/XKlB9Llx0lY/maxresdefault.jpg" alt="Vorschau 7">
+      </div>
+      <div class="video-item" onclick="window.location.href='web/Plane/index.html'">
+        <img src="https://entertainment.inquirer.net/files/2023/02/330465132_1146959286012563_3221031860531532947_n.jpg" alt="Vorschau 7">
+      </div>
+    </div>
 
-  <div id="search-bar" class="search-bar">
-    <input type="text" placeholder="Search...">
-    <button onclick="toggleSearchBar()">Search</button>
-  </div>
-
-  <script>
-    function toggleSearchBar() {
-      var searchBar = document.getElementById("search-bar");
-      searchBar.classList.toggle("show");
-    }
-    // Funktion zum Anzeigen des Thumbnails basierend auf dem Suchbegriff
-function showThumbnail() {
-  var searchInput = document.getElementById('search-input');
-  var thumbnailContainer = document.getElementById('thumbnail-container');
+    <div class="video-container-2">
+      <div class="video-row-2">
+        <div class="video-item" onclick="window.location.href='web/The Package/index.html'">
+          <img src="https://occ-0-41-2164.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABTfTVWws7Gv6QlHoDpnzQ1iOEe_25pPpj8YM2qthX2-SoDmXF2uolDAE6KrQLh4uYrRzGwSWeWNLYV1DR30qGQ42lobDxqYYsSid.jpg?r=a8c" alt="Vorschau 2">
+        </div>
+        <div class="video-item" onclick="window.location.href='web/Coach Carter/index.html'">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr2fOkab1JPVZYOQ91ncQe2Sw7DTxUwIzaOMK0HYIBIqMfmwohEv1UAzVdtJOJL7BJ6SE&usqp=CAU" alt="Vorschau 3">
+        </div>
+        <div class="video-item" onclick="window.location.href='web/Max Bester Freund Held Retter/index.html'">
+          <img src="" alt="Vorschau 6">
+        </div>
+        <div class="video-item" onclick="window.location.href='web/Source Code/index.html'">
+          <img src="" alt="Vorschau 8">
+        </div>
+      </div>
+    </div>
   
-  var searchQuery = searchInput.value.toLowerCase();
-  
-  if (searchQuery === 'luca') {
-    // Zeige das Thumbnail-Bild für Luca an
-    thumbnailContainer.innerHTML = '<img src="luca-thumbnail.jpg" alt="Luca Thumbnail">';
-  } else {
-    // Kein passendes Thumbnail gefunden
-    thumbnailContainer.innerHTML = 'Kein Thumbnail gefunden.';
-  }
-}
+ 
 
-// Event-Listener für das Such-Button-Klicken
-var searchSubmitButton = document.getElementById('search-submit');
-searchSubmitButton.addEventListener('click', showThumbnail);
-
-  </script>
   <script src="script.js"></script>
 </body>
 </html>

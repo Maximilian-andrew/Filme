@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>The Banker</title>
+    <meta name="description" content="Plataforma do disney plus" />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/jpg" href="assets/favicon.ico" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- *currently set to "Roboto". Feel free to change it to whatever you like* -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLE LINK -->
+    <link rel="stylesheet" href="styles/global.css" />
+
+
+    <script>
+      function redirectToPage() {
+        window.location.href = ""; // Hier die gewünschte URL einfügen
+      }
+    </script>
+    
+  </head>
+  <body>
+    <div id="app">
+      <div class="app__image">
+        <img
+          loading="lazy"
+          alt="Ausgewähltes Filmbild"
+          src="https://static01.nyt.com/images/2020/01/16/business/16APPLEFILM-01/merlin_165235722_111b97e9-411b-43c4-8f04-685e48a38fc2-superJumbo.jpg"
+        />
+      </div>
+
+      <header>
+        <img src="assets/logo.png" alt="Disney Plus-Logo" />
+
+        <button type="button" class="button__menu" onclick="changeButtonMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="navigation">
+          <h2>Filme</h2>
+
+          <form class="form" id="add__movie">
+            <input type="text" placeholder="Suche" name="movie" />
+
+            <button type="submit">
+              +
+            </button>
+          </form>
+
+          <ul id="movies">
+
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="feature__movie">
+          <div class="rating">
+            <img src="assets/logo-imdb.png" alt="Logo da IMDB" />
+            <strong>7.877</strong>
+          </div>
+
+          <!-- DATA DE LANÇAMENTO, CATEGORIA -->
+          <span>2020 – Drama – Film</span>
+          <!-- TITULO DO FILME -->
+          <h1></h1>
+          <!-- SINOPSE DO FILME -->
+          <p>Die dunkelhäutigen Unternehmer Joe Morris und Barnard Garrett entwickeln in den 1950er-Jahren einen kühnen Plan, um gegen Rassismus in den USA vorzugehen. Sie bilden zusammen mit Garretts Frau Eunice einen weißen Arbeiter aus, der mit ihrer Hilfe zu einem der reichsten Immobilienbesitzer des Landes aufsteigen soll. Garrett und Morris selbst fungieren unterdessen selbst nur als Chauffeur und Hausmeister für das Imperium.
+          </p>
+
+          <button onclick="window.location.href = 'https://streamtape.com/v/qr7k8kVR1dCzpXP/The_Banker.mp4';">
+            <img src="assets/icon-play.png" alt="Icon play">
+            jetzt Schauen</button>
+        </section>
+
+      </main>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

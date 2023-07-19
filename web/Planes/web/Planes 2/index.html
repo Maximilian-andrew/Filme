@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Planes 2</title>
+    <meta name="description" content="Plataforma do disney plus" />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/jpg" href="assets/favicon.ico" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- *currently set to "Roboto". Feel free to change it to whatever you like* -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLE LINK -->
+    <link rel="stylesheet" href="styles/global.css" />
+
+
+    <script>
+      function redirectToPage() {
+        window.location.href = ""; // Hier die gewünschte URL einfügen
+      }
+    </script>
+    
+  </head>
+  <body>
+    <div id="app">
+      <div class="app__image">
+        <img
+          loading="lazy"
+          alt="Ausgewähltes Filmbild"
+          src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/A5AC883293DFF188014FD76296300DB5D5B9C056735EA6FE2B5F5D7EFC7B656B/scale?width=1200&aspectRatio=1.78&format=jpeg"
+        />
+      </div>
+
+      <header>
+        <img src="https://files.fm/thumb.php?i=hv6mcuduc" alt="Disney Plus-Logo" />
+
+        <button type="button" class="button__menu" onclick="changeButtonMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="navigation">
+          <h2>Filme</h2>
+
+          <form class="form" id="add__movie">
+            <input type="text" placeholder="Suche" name="movie" />
+
+            <button type="submit">
+              +
+            </button>
+          </form>
+
+          <ul id="movies">
+
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="feature__movie">
+          <div class="rating">
+            <img src="assets/logo-imdb.png" alt="Logo da IMDB" />
+            <strong>7.877</strong>
+          </div>
+
+          <!-- DATA DE LANÇAMENTO, CATEGORIA -->
+          <span>2014 – Animation – Film</span>
+          <!-- TITULO DO FILME -->
+          <h1></h1>
+          <!-- SINOPSE DO FILME -->
+          <p>Nachdem es Dusty Crophopper vom einfachen Sprühflugzeug zu einer gefeierten Fliegenlegende gebracht hat, muss er nun ein paar Gänge zurückfahren. Bei einem waghalsigen Manöver hat sein Motor nämlich einen Schaden davon getragen. Die Diagnose ist niederschmetternd. Er wird wohl nie wieder an Rennen teilnehmen können. Entmutigt zieht er sich zurück und landet bei einer Feuerlöscheinheit, die sich sinnigerweise `The Smokejumpers' nennt.
+          </p>
+
+          <button onclick="window.location.href = 'https://streamtape.com/v/j7r9wPKz7PiLvB/Planes_2.mp4';">
+            <img src="assets/icon-play.png" alt="Icon play">
+            jetzt Schauen</button>
+
+        </section>
+
+      </main>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
