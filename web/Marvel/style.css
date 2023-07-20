@@ -180,7 +180,21 @@ html {
   .item {
   width: 20%;
   }
-}  
+} 
+
+@media only screen and (max-width: 768px) {
+  .item {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .item {
+    width: calc(20% - 20px);
+  }
+}
 
 .video-container {
   width: 100%;
