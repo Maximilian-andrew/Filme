@@ -124,7 +124,6 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  overflow-x: hidden;
 }
 
 .item {
