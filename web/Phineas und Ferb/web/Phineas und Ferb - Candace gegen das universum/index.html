@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Luca</title>
+    <meta name="description" content="Plataforma do disney plus" />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/jpg" href="assets/favicon.ico" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- *currently set to "Roboto". Feel free to change it to whatever you like* -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLE LINK -->
+    <link rel="stylesheet" href="styles/global.css" />
+
+
+    <script>
+      function redirectToPage() {
+        window.location.href = ""; // Hier die gewünschte URL einfügen
+      }
+    </script>
+    
+  </head>
+  <body>
+    <div id="app">
+      <div class="app__image">
+        <img
+          loading="lazy"
+          alt="Ausgewähltes Filmbild"
+          src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/9A22DB6DC9D5CD58DB59AD4D78A6005029D618B626B06295A63AC8F7951D67D2/scale?width=1200&aspectRatio=1.78&format=jpeg"
+        />
+      </div>
+
+      <header>
+        <img src="assets/logo.png" alt="Disney Plus-Logo" />
+
+        <button type="button" class="button__menu" onclick="changeButtonMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="navigation">
+          <h2>Filme</h2>
+
+          <form class="form" id="add__movie">
+            <input type="text" placeholder="Suche" name="movie" />
+
+            <button type="submit">
+              +
+            </button>
+          </form>
+
+          <ul id="movies">
+
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="feature__movie">
+          <div class="rating">
+            <img src="assets/logo-imdb.png" alt="Logo da IMDB" />
+            <strong>7.877</strong>
+          </div>
+
+          <!-- DATA DE LANÇAMENTO, CATEGORIA -->
+          <span>2020 – Animation – Film</span>
+          <!-- TITULO DO FILME -->
+          <h1></h1>
+          <!-- SINOPSE DO FILME -->
+          <p>Nachdem Außerirdische ihre Schwester Candace entführten haben, stürzen sich die Stiefbrüder Phineas und Ferb in ein neues Abenteuer. Der ferne Planet, auf dem Candace gelandet ist, heißt Utopia und ist geradezu paradiesisch.
+          </p>
+
+          <button onclick="window.location.href = 'https://streamtape.com/v/v262qro2y1T4k8a/phineas_und_ferb_candace_gegen_das_universum.mp4';">
+            <img src="assets/icon-play.png" alt="Icon play">
+            jetzt Schauen</button>
+        </section>
+
+      </main>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

@@ -118,8 +118,9 @@
                 <option value="in 80 Tagen um die Welt">
                 <option value="Lightyear">
                 <option value="Clifford der große rote Hund">
-                <option value="">
-                <option value="">
+                <option value="Milo und Mars">
+                <option value="Phineas und Ferb">
+                <option value="Peter Pan & Wendy">
               <!-- Weitere Optionen können hier hinzugefügt werden -->
             </datalist>
             <button id="search-submit" class="search-button" onclick="showThumbnailAndRedirect()">Search</button>
@@ -633,6 +634,57 @@ function showThumbnailAndRedirect() {
     thumbnailImage.addEventListener('click', function() {
       // Weiterleiten zu einer anderen Webseite für The Banker
       window.location.href = 'web/Clifford der große rote Hund/index.html';
+    });
+  } else if (searchQuery === 'milo und mars') {
+    // Erzeuge das Thumbnail-Bild für  Inception
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/E62D89990735F59AA8A0BDE4F86BAEA23D72609DFA30D25A33575F5010D1AD2C/scale?width=1200&aspectRatio=1.78&format=jpeg';
+    thumbnailImage.alt = 'Inception Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für The Banker
+      window.location.href = 'web/Milo und Mars/index.html';
+    });
+  } else if (searchQuery === 'peter pan & wendy') {
+    // Erzeuge das Thumbnail-Bild für  Inception
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://flixable.b-cdn.net/disney-plus/small/de/peter-pan-wendy.png';
+    thumbnailImage.alt = 'Inception Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für The Banker
+      window.location.href = 'web/Peter Pan & Wendy/index.html';
+    });
+  } else if (searchQuery === 'phineas und ferb') {
+    // Erzeuge das Thumbnail-Bild für  Inception
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/8365/608365-h';
+    thumbnailImage.alt = 'Inception Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für The Banker
+      window.location.href = 'web/Phineas und Ferb/index.html';
     });
   } else {
     // Kein passendes Thumbnail gefunden

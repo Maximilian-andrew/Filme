@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Milo und Mars</title>
+    <meta name="description" content="Plataforma do disney plus" />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/jpg" href="assets/favicon.ico" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- *currently set to "Roboto". Feel free to change it to whatever you like* -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLE LINK -->
+    <link rel="stylesheet" href="styles/global.css" />
+
+
+    <script>
+      function redirectToPage() {
+        window.location.href = ""; // Hier die gewünschte URL einfügen
+      }
+    </script>
+    
+  </head>
+  <body>
+    <div id="app">
+      <div class="app__image">
+        <img
+          loading="lazy"
+          alt="Ausgewähltes Filmbild"
+          src="https://image.tmdb.org/t/p/w1280/8wLLBscj3wcrA38mL7U5wbcBfr8.jpg"
+        />
+      </div>
+
+      <header>
+        <img src="assets/logo.png" alt="Disney Plus-Logo" />
+
+        <button type="button" class="button__menu" onclick="changeButtonMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="navigation">
+          <h2>Filme</h2>
+
+          <form class="form" id="add__movie">
+            <input type="text" placeholder="Suche" name="movie" />
+
+            <button type="submit">
+              +
+            </button>
+          </form>
+
+          <ul id="movies">
+
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="feature__movie">
+          <div class="rating">
+            <img src="assets/logo-imdb.png" alt="Logo da IMDB" />
+            <strong>7.877</strong>
+          </div>
+
+          <!-- DATA DE LANÇAMENTO, CATEGORIA -->
+          <span>2021 – Animation – Film</span>
+          <!-- TITULO DO FILME -->
+          <h1></h1>
+          <!-- SINOPSE DO FILME -->
+          <p>Milo ist neun Jahre alt und hat vieles im Kopf: Monsterfilme, Comics und andere spaßige Aktivitäten. Er hat definitiv keine Zeit, Hausaufgaben zu machen oder sein Gemüse zu essen. Er hat es satt, dass seine Mutter ihn dazu zwingen will. Diese hat es wiederum satt, ihn ständig an alles erinnern zu müssen. Eines Tages sagt Milo ihr, dass das Leben ohne sie lustiger wäre. Kurz darauf wird sie von Marsmenschen entführt. Der Junge ist fest entschlossen, seine Mutter zu retten.
+          </p>
+
+          <button onclick="window.location.href = 'https://streamtape.com/v/YpW86QXLmDUvP4a/Milo_und_Mars.mp4';">
+            <img src="assets/icon-play.png" alt="Icon play">
+            jetzt Schauen</button>
+        </section>
+
+      </main>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
