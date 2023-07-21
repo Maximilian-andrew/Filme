@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Encanto</title>
+    <meta name="description" content="Plataforma do disney plus" />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/jpg" href="assets/favicon.ico" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- *currently set to "Roboto". Feel free to change it to whatever you like* -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLE LINK -->
+    <link rel="stylesheet" href="styles/global.css" />
+
+
+    <script>
+      function redirectToPage() {
+        window.location.href = ""; // Hier die gewünschte URL einfügen
+      }
+    </script>
+    
+  </head>
+  <body>
+    <div id="app">
+      <div class="app__image">
+        <img
+          loading="lazy"
+          alt="Ausgewähltes Filmbild"
+          src="https://images2.alphacoders.com/119/1199535.jpg"
+        />
+      </div>
+
+      <header>
+        <img src="assets/logo.png" alt="Disney Plus-Logo" />
+
+        <button type="button" class="button__menu" onclick="changeButtonMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="navigation">
+          <h2>Filme</h2>
+
+          <form class="form" id="add__movie">
+            <input type="text" placeholder="Suche" name="movie" />
+
+            <button type="submit">
+              +
+            </button>
+          </form>
+
+          <ul id="movies">
+
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="feature__movie">
+          <div class="rating">
+            <img src="assets/logo-imdb.png" alt="Logo da IMDB" />
+            <strong>7.877</strong>
+          </div>
+
+          <!-- DATA DE LANÇAMENTO, CATEGORIA -->
+          <span>2021 – Animation – Film</span>
+          <!-- TITULO DO FILME -->
+          <h1></h1>
+          <!-- SINOPSE DO FILME -->
+          <p>Versteckt in den Bergen Kolumbiens lebt die magische begabte Familie Madrigal in einem Dorf namens Encanto. Die Einzige, die allerdings keinen Funken Magie beherrscht, ist die Jugendliche Mirabel. Sie versucht, sich trotz ihres Handicaps einzugliedern. Plötzlich wird das Zuhause der Familie bedroht, was zur Folge hat, dass die Magie aus Encanto verschwindet. Die unbegabte 15-Jährige ist auf sich allein gestellt, um ihre Familie zu retten.</p>
+
+          <button onclick="window.location.href = 'https://streamtape.com/v/qDrP84X7mKFw6M/luca.mp4';">
+            <img src="assets/icon-play.png" alt="Icon play">
+            jetzt Schauen</button>
+        </section>
+
+      </main>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

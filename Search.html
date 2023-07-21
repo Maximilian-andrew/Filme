@@ -91,12 +91,41 @@
         <li>
           <button id="search-button" class="menu-button" onclick="toggleSearchBar()"><i class="fas fa-search"></i>Search</button>
           <div id="search-bar" class="search-bar">
-            <input id="search-input" type="text" placeholder="Search...">
-            <button id="search-submit" class="search-button">Search</button>
+            <input id="search-input" type="text" placeholder="Search..." list="search-options" autocomplete="off">
+            <datalist id="search-options">
+              <option value="Luca">
+                <option value="Spiderman">
+                <option value="Cars">
+                <option value="drachenzähmen">
+                <option value="willkommen im wunder park">
+                <option value="Source Code">
+                <option value="Ratatouille">
+                <option value="Max Bester Freund Held Retter">
+                <option value="Deadpool">
+                <option value="Guardians of the Galaxy">
+                <option value="Iron Man">
+                <option value="Planes">
+                <option value="Plane">
+                <option value="No Hard Feelings">
+                <option value="Coach Carter">
+                <option value="The Package">
+                <option value="The Hate u Give">
+                <option value="The Banker">
+                <option value="die drei ??? - erbe des drachen">
+                <option value="Inception">
+                <option value="Before We Go">
+                <option value="Encanto">
+                <option value="in 80 Tagen um die Welt">
+                <option value="Lightyear">
+                <option value="Clifford der große rote Hund">
+                <option value="">
+                <option value="">
+              <!-- Weitere Optionen können hier hinzugefügt werden -->
+            </datalist>
+            <button id="search-submit" class="search-button" onclick="showThumbnailAndRedirect()">Search</button>
           </div>
         </li>
     </nav>
-    
   </header>
 
   <div class="line"></div>
@@ -163,7 +192,7 @@ function showThumbnailAndRedirect() {
       // Weiterleiten zu einer anderen Webseite für Cars
       window.location.href = 'web/Cars/index.html';
     });
-  } else if (searchQuery === 'drachen') {
+  } else if (searchQuery === 'drachenzähmen') {
     // Erzeuge das Thumbnail-Bild für drachen
     var thumbnailImage = document.createElement('img');
     thumbnailImage.src = 'vorschau7.jpg';
@@ -180,28 +209,11 @@ function showThumbnailAndRedirect() {
       // Weiterleiten zu einer anderen Webseite für drachen
       window.location.href = 'web/Drachenzähmen/index.html';
     });
-  } else if (searchQuery === 'drachen') {
-    // Erzeuge das Thumbnail-Bild für drachen
-    var thumbnailImage = document.createElement('img');
-    thumbnailImage.src = 'vorschau7.jpg';
-    thumbnailImage.alt = 'drachen Thumbnail';
-    thumbnailImage.style.width = '50%';
-    thumbnailImage.style.height = '50%';
-    
-    // Füge das Thumbnail-Bild zum Container hinzu
-    thumbnailContainer.innerHTML = '';
-    thumbnailContainer.appendChild(thumbnailImage);
-    
-    // Event-Listener für das Klicken auf das Thumbnail-Bild
-    thumbnailImage.addEventListener('click', function() {
-      // Weiterleiten zu einer anderen Webseite für drachen
-      window.location.href = 'web/Drachenzähmen/index.html';
-    });
-  } else if (searchQuery === 'park') {
-    // Erzeuge das Thumbnail-Bild für park
+  } else if (searchQuery === 'willkommen im wunder park') {
+    // Erzeuge das Thumbnail-Bild für Willkommen im Wunder Park
     var thumbnailImage = document.createElement('img');
     thumbnailImage.src = 'vorschau1.jpg';
-    thumbnailImage.alt = 'park Thumbnail';
+    thumbnailImage.alt = 'Willkommen im Wunder Park Thumbnail';
     thumbnailImage.style.width = '50%';
     thumbnailImage.style.height = '50%';
     
@@ -211,7 +223,7 @@ function showThumbnailAndRedirect() {
     
     // Event-Listener für das Klicken auf das Thumbnail-Bild
     thumbnailImage.addEventListener('click', function() {
-      // Weiterleiten zu einer anderen Webseite für park
+      // Weiterleiten zu einer anderen Webseite für Willkommen im Wunder Park
       window.location.href = 'web/Willkommen Im Wunder Park/index.html';
     });
   } else if (searchQuery === 'source code') {
@@ -248,7 +260,7 @@ function showThumbnailAndRedirect() {
       // Weiterleiten zu einer anderen Webseite für Source Code
       window.location.href = 'web/Source Code/index.html';
     });
-  } else if (searchQuery === 'ratte') {
+  } else if (searchQuery === 'ratatouille') {
     // Erzeuge das Thumbnail-Bild für Ratatouille
     var thumbnailImage = document.createElement('img');
     thumbnailImage.src = 'vorschau4.jpg';
@@ -282,7 +294,7 @@ function showThumbnailAndRedirect() {
       // Weiterleiten zu einer anderen Webseite für Dinosaurier
       window.location.href = 'web/im Land der Dinosaurier/index.html';
     });
-  } else if (searchQuery === 'max') {
+  } else if (searchQuery === 'max Bester freund held retter') {
     // Erzeuge das Thumbnail-Bild für Max Bester Freund Held Retter
     var thumbnailImage = document.createElement('img');
     thumbnailImage.src = 'vorschau6.jpg';
@@ -299,7 +311,7 @@ function showThumbnailAndRedirect() {
       // Weiterleiten zu einer anderen Webseite für Max Bester Freund Held Retter
       window.location.href = 'web/Max Bester Freund Held Retter/index.html';
     });
-  } else if (searchQuery === 'pool') {
+  } else if (searchQuery === 'deadpool') {
     // Erzeuge das Thumbnail-Bild für Deadpool
     var thumbnailImage = document.createElement('img');
     thumbnailImage.src = 'https://images7.alphacoders.com/901/thumb-1920-901925.jpg';
@@ -316,7 +328,7 @@ function showThumbnailAndRedirect() {
       // Weiterleiten zu einer anderen Webseite für Deadpool
       window.location.href = 'web/Marvel/web/Deadpool/index.html';
     });
-  } else if (searchQuery === 'of the') {
+  } else if (searchQuery === 'guardians of the galaxy') {
     // Erzeuge das Thumbnail-Bild für Guardians of the Galaxy
     var thumbnailImage = document.createElement('img');
     thumbnailImage.src = 'https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/C1C0181ED7342217394E5AC940003A8653E3311B6016194749B29A0FE3F238EB/scale?width=1200&aspectRatio=1.78&format=jpeg';
@@ -402,7 +414,7 @@ function showThumbnailAndRedirect() {
       window.location.href = 'web/Planes/index.html';
     });
   } else if (searchQuery === 'plane') {
-    // Erzeuge das Thumbnail-Bild für Planes
+    // Erzeuge das Thumbnail-Bild für Plane
     var thumbnailImage = document.createElement('img');
     thumbnailImage.src = 'https://entertainment.inquirer.net/files/2023/02/330465132_1146959286012563_3221031860531532947_n.jpg';
     thumbnailImage.alt = 'Plane Thumbnail';
@@ -418,7 +430,7 @@ function showThumbnailAndRedirect() {
       // Weiterleiten zu einer anderen Webseite für Plane
       window.location.href = 'web/Plane/index.html';
     });
-  } else if (searchQuery === 'no') {
+  } else if (searchQuery === 'no hard feelings') {
     // Erzeuge das Thumbnail-Bild für no
     var thumbnailImage = document.createElement('img');
     thumbnailImage.src = 'https://i.ibb.co/wCmV7Z2/images-Kopie-v1.png';
@@ -435,7 +447,7 @@ function showThumbnailAndRedirect() {
       // Weiterleiten zu einer anderen Webseite für no
       window.location.href = 'web/No Hard Feelings/index.html';
     });
-  } else if (searchQuery === 'carter') {
+  } else if (searchQuery === 'coach carter') {
     // Erzeuge das Thumbnail-Bild für Coach Carter
     var thumbnailImage = document.createElement('img');
     thumbnailImage.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr2fOkab1JPVZYOQ91ncQe2Sw7DTxUwIzaOMK0HYIBIqMfmwohEv1UAzVdtJOJL7BJ6SE&usqp=CAU';
@@ -452,7 +464,7 @@ function showThumbnailAndRedirect() {
       // Weiterleiten zu einer anderen Webseite für Coach Carter
       window.location.href = 'web/Coach Carter/index.html';
     });
-  } else if (searchQuery === 'the p') {
+  } else if (searchQuery === 'the package') {
     // Erzeuge das Thumbnail-Bild für The Package
     var thumbnailImage = document.createElement('img');
     thumbnailImage.src = 'https://occ-0-41-2164.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABTfTVWws7Gv6QlHoDpnzQ1iOEe_25pPpj8YM2qthX2-SoDmXF2uolDAE6KrQLh4uYrRzGwSWeWNLYV1DR30qGQ42lobDxqYYsSid.jpg?r=a8c';
@@ -469,7 +481,7 @@ function showThumbnailAndRedirect() {
       // Weiterleiten zu einer anderen Webseite für The Package
       window.location.href = 'web/The Package/index.html';
     });
-  } else if (searchQuery === 'the') {
+  } else if (searchQuery === 'the hate u give') {
     // Erzeuge das Thumbnail-Bild für no
     var thumbnailImage = document.createElement('img');
     thumbnailImage.src = 'https://csrd.asu.edu/sites/default/files/the_hate_u_give_-_website_image.png';
@@ -486,7 +498,7 @@ function showThumbnailAndRedirect() {
       // Weiterleiten zu einer anderen Webseite für The Hate u Give
       window.location.href = 'web/The Hate u Give/index.html';
     });
-  } else if (searchQuery === 'banker') {
+  } else if (searchQuery === 'the banker') {
     // Erzeuge das Thumbnail-Bild für The Banker
     var thumbnailImage = document.createElement('img');
     thumbnailImage.src = 'https://i.ytimg.com/vi/XKlB9Llx0lY/maxresdefault.jpg';
@@ -502,6 +514,125 @@ function showThumbnailAndRedirect() {
     thumbnailImage.addEventListener('click', function() {
       // Weiterleiten zu einer anderen Webseite für The Banker
       window.location.href = 'web/The Banker/index.html';
+    });
+  } else if (searchQuery === 'inception') {
+    // Erzeuge das Thumbnail-Bild für  Inception
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://image.tmdb.org/t/p/w1280/rWDkbJlIyqN8KcqXajh9sZMwGzo.jpg';
+    thumbnailImage.alt = 'Inception Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für The Banker
+      window.location.href = 'web/Inception/index.html';
+    });
+  } else if (searchQuery === 'die drei ??? - erbe des drachen') {
+    // Erzeuge das Thumbnail-Bild für  Inception
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/116905ae37f0d607827386c9489390e2495eb0227de2d36a5fe8e72e4ea9f702._UY500_UX667_RI_TTW_.png';
+    thumbnailImage.alt = 'Inception Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für The Banker
+      window.location.href = 'web/Die Drei  - Erbe des Drachen/index.html';
+    });
+  } else if (searchQuery === 'before we go') {
+    // Erzeuge das Thumbnail-Bild für  Inception
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://nerdlush.files.wordpress.com/2017/01/filme-before-we-go.png';
+    thumbnailImage.alt = 'Inception Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für The Banker
+      window.location.href = 'web/Before We Go/index.html';
+    });
+  } else if (searchQuery === 'encanto') {
+    // Erzeuge das Thumbnail-Bild für  Inception
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://wallpaperaccess.com/full/7485234.jpg';
+    thumbnailImage.alt = 'Inception Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für The Banker
+      window.location.href = 'web/Encanto/index.html';
+    });
+  } else if (searchQuery === 'in 80 tagen um die welt') {
+    // Erzeuge das Thumbnail-Bild für  Inception
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://i.ytimg.com/vi/86HMHY67FQ4/maxresdefault.jpg';
+    thumbnailImage.alt = 'Inception Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für The Banker
+      window.location.href = 'web/in 80 Tagen um die Welt/index.html';
+    });
+  } else if (searchQuery === 'lightyear') {
+    // Erzeuge das Thumbnail-Bild für  Inception
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://thecollision.org/wp-content/uploads/2022/06/Movie-Review-thumbnails-19.png';
+    thumbnailImage.alt = 'Inception Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für The Banker
+      window.location.href = 'web/Lightyear/index.html';
+    });
+  } else if (searchQuery === 'clifford der große rote hund') {
+    // Erzeuge das Thumbnail-Bild für  Inception
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://www.sky.de/static/img/filmhighlights/sky_22-06_Clifford.jpg';
+    thumbnailImage.alt = 'Inception Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für The Banker
+      window.location.href = 'web/Clifford der große rote Hund/index.html';
     });
   } else {
     // Kein passendes Thumbnail gefunden

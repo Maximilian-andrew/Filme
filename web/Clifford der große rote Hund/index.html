@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Clifford der große rote Hund</title>
+    <meta name="description" content="Plataforma do disney plus" />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/jpg" href="assets/favicon.ico" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- *currently set to "Roboto". Feel free to change it to whatever you like* -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLE LINK -->
+    <link rel="stylesheet" href="styles/global.css" />
+
+
+    <script>
+      function redirectToPage() {
+        window.location.href = ""; // Hier die gewünschte URL einfügen
+      }
+    </script>
+    
+  </head>
+  <body>
+    <div id="app">
+      <div class="app__image">
+        <img
+          loading="lazy"
+          alt="Ausgewähltes Filmbild"
+          src="https://media.ouest-france.fr/v1/pictures/909adb1b32635078021125681bd31646-clifford-film-pour-la-jeunesse-programme-tv.jpg?width=1260&sign=09d8baaad3439516f68dd5fe90f7b23d8d51e08f926176813bdcbdbc11944fe3&client_id=bpservices"
+        />
+      </div>
+
+      <header>
+        <img src="assets/logo.png" alt="Disney Plus-Logo" />
+
+        <button type="button" class="button__menu" onclick="changeButtonMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="navigation">
+          <h2>Filme</h2>
+
+          <form class="form" id="add__movie">
+            <input type="text" placeholder="Suche" name="movie" />
+
+            <button type="submit">
+              +
+            </button>
+          </form>
+
+          <ul id="movies">
+
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="feature__movie">
+          <div class="rating">
+            <img src="assets/logo-imdb.png" alt="Logo da IMDB" />
+            <strong>7.877</strong>
+          </div>
+
+          <!-- DATA DE LANÇAMENTO, CATEGORIA -->
+          <span>2021 – Animation – Film</span>
+          <!-- TITULO DO FILME -->
+          <h1></h1>
+          <!-- SINOPSE DO FILME -->
+          <p>Die kleine Emily erhält zu ihrem Geburtstag ein ganz besonderes Geburtstagsgeschenk, einen kleinen roten Hund. Der rote Welpe, der auf den Namen Clifford hört, beginnt durch die unaufhörliche Liebe seiner neuen Besitzerin unaufhörlich zu wachsen.</p>
+
+          <button onclick="window.location.href = 'https://streamtape.com/v/RergQdw1RKcdrod/Clifford_der_gro%C3%9Fe_rote_Hund.mp4';">
+            <img src="assets/icon-play.png" alt="Icon play">
+            jetzt Schauen</button>
+        </section>
+
+      </main>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
