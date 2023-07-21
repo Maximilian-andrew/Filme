@@ -203,6 +203,7 @@ html {
   margin-top: 220px;
   overflow-x: hidden;
   overflow-y: hidden;
+  overflow-wrap: break-word;
 }
 
 .video-row {
