@@ -242,6 +242,40 @@ nav {
   transform: scale(1.1);
 }
 
+
+
+.video-container-3 {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-top: 10px; /* Abstand von 10px nach oben */
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
+
+.video-row-3 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.video-item-3 {
+  flex: 0 0 24%;
+  cursor: pointer;
+}
+
+.video-item-3 img {
+  border-radius: 5mm;
+  padding: 12px;
+  max-width: 80%;
+  height: auto;
+}
+
+.video-item-3:hover img {
+  transform: scale(1.1);
+}
+
 /* Für WebKit-basierte Browser */
 /* Scrollleiste */
 ::-webkit-scrollbar {
