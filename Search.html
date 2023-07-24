@@ -128,6 +128,7 @@
                 <option value="Luck">
                 <option value="Playmobil Der Film">
                 <option value="Die Mitchells gegen die Maschinen">
+                <option value="I Am Legend">
               <!-- Weitere Optionen können hier hinzugefügt werden -->
             </datalist>
             <button id="search-submit" class="search-button" onclick="showThumbnailAndRedirect()">Search</button>
@@ -811,6 +812,23 @@ function showThumbnailAndRedirect() {
     thumbnailImage.addEventListener('click', function() {
       // Weiterleiten zu einer anderen Webseite für The Banker
       window.location.href = 'web/Die Mitchells gegen die Maschinen/index.html';
+    });
+  } else if (searchQuery === 'i am legend') {
+    // Erzeuge das Thumbnail-Bild für  Inception
+    var thumbnailImage = document.createElement('img');
+    thumbnailImage.src = 'https://w0.peakpx.com/wallpaper/431/171/HD-wallpaper-i-am-legend-will-smith-movie.jpg';
+    thumbnailImage.alt = 'Inception Thumbnail';
+    thumbnailImage.style.width = '50%';
+    thumbnailImage.style.height = '50%';
+    
+    // Füge das Thumbnail-Bild zum Container hinzu
+    thumbnailContainer.innerHTML = '';
+    thumbnailContainer.appendChild(thumbnailImage);
+    
+    // Event-Listener für das Klicken auf das Thumbnail-Bild
+    thumbnailImage.addEventListener('click', function() {
+      // Weiterleiten zu einer anderen Webseite für The Banker
+      window.location.href = 'web/I Am Legend/index.html';
     });
   } else {
     // Kein passendes Thumbnail gefunden
